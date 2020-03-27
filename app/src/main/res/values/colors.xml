@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4db6ac</color>
+    <color name="colorPrimaryDark">#00867d</color>
+    <color name="colorAccent">#82e9de</color>
+    <color name="tiles">#455a64</color>
+    <color name="tileColorQ">#ffab91 </color>
+    <color name="tileColorO">#ffcc80 </color>
+    <color name="tileColorP">#a5d6a7 </color>
+    <color name="tileColorK">#80deea </color>
+    <color name="tileColorN">#b39ddb </color>
+    <color name="tileColorL">#ef9a9a </color>
+    <color name="tileColorM">#d7ccc8 </color>
+    <color name="tileColorR">#f4511e </color>
+
+</resources>
