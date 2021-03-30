@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -18,7 +17,6 @@ import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -26,14 +24,15 @@ import java.util.List;
 public class TilesView extends View {
 
     final int PAUSE_LENGTH = 1;
+    //TODO задание: всё же использовать высоту дисплея, т.к. ваши размеры могут по другому отобразиться на разных мониторах
     int displayWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
     int openedCards = 0;
-
+//TODO: я не до конца понимаю название переменных: если tmpWidth и tmpHeight это воспринимаеться как ширина и высота карт, то что такое tmpX, tmpY? Отступы?
     float tmpWidth = displayWidth / 5;
     float tmpHeight = displayWidth / 5;
     float tmpX = tmpWidth / 3;
     float tmpY = tmpWidth / 3;
-
+//TODO: проще задать карты двухмерным массивом, тогда потребность в длинных вычислениях координат для их расположения не потребуется
     ArrayList<Card> cards = new ArrayList<>();
     List<Integer> colors;
 
@@ -141,7 +140,6 @@ public class TilesView extends View {
     }
 
     public boolean checkOpenCardsEqual() {
-
         int color = Color.rgb(0, 0, 0);
         Card firstCard = cards.get(0);
         Card secondCard;
@@ -184,6 +182,7 @@ public class TilesView extends View {
     }
 
     public void setColorsAndTiles() {
+        //TODO: ааа, зачем так всё раскидывать по коду? Нельзя прописать все своиства объекта в одном месте?
         colors = Arrays.asList(
                 getResources().getColor(R.color.tileColorK), getResources().getColor(R.color.tileColorL),
                 getResources().getColor(R.color.tileColorM), getResources().getColor(R.color.tileColorN),
@@ -209,10 +208,11 @@ public class TilesView extends View {
             }
 
         }
-        tmpWidth = displayWidth / 5;
-        tmpHeight = displayWidth / 5;
-        tmpX = tmpWidth / 3;
-        tmpY = tmpWidth / 3;
+        //TODO: смысл ещё раз прописывать размеры?
+//        tmpWidth = displayWidth / 5;
+//        tmpHeight = displayWidth / 5;
+//        tmpX = tmpWidth / 3;
+//        tmpY = tmpWidth / 3;
     }
 
 
