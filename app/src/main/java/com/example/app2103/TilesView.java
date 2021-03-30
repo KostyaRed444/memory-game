@@ -209,10 +209,10 @@ public class TilesView extends View {
 
         }
         //TODO: смысл ещё раз прописывать размеры?
-//        tmpWidth = displayWidth / 5;
-//        tmpHeight = displayWidth / 5;
-//        tmpX = tmpWidth / 3;
-//        tmpY = tmpWidth / 3;
+        tmpWidth = displayWidth / 5;
+        tmpHeight = displayWidth / 5;
+        tmpX = tmpWidth / 3;
+        tmpY = tmpWidth / 3;
     }
 
 
