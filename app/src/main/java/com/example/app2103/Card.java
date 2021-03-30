@@ -6,7 +6,7 @@ import android.graphics.Paint;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
-
+ //TODO: хорошо... прописали класс Card в отдельном файле, но зачем нам тогда все те вычисления и переменные с TilesView? Можно было тогда прописать этот класс там же и не раскидывать так код по всему проекту
 public class Card {
 
     Paint p = new Paint();
